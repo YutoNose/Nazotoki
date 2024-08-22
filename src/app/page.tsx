@@ -1,6 +1,29 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
 
 export default function YaguchiKunPage() {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const password = Cookies.get("password");
+
+    if (password === "yourPassword") {
+      setIsAuthenticated(true);
+    } else {
+      router.push("/signin");
+    }
+  }, [router]);
+
+  if (isAuthenticated === null) {
+    // 認証が完了するまで何も表示しない
+    return null;
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 p-10">
       <header className="text-center mb-12">
