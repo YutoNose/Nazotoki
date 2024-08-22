@@ -1,13 +1,31 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
 export default function GamePage() {
   const router = useRouter();
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const password = Cookies.get("password");
+
+    if (password === "yourPassword") {
+      setIsAuthenticated(true);
+    } else {
+      router.push("/signin");
+    }
+  }, [router]);
 
   const handlePlayGame = (path: string) => {
     router.push(path);
   };
+
+  if (isAuthenticated === null) {
+    // 認証が完了するまで何も表示しない
+    return null;
+  }
 
   return (
     <main className="min-h-screen p-10 bg-gray-100">
