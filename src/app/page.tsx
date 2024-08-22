@@ -11,7 +11,6 @@ export default function YaguchiKunPage() {
   const router = useRouter();
   const [buttonSequence, setButtonSequence] = useState<string[]>([]);
 
-
   useEffect(() => {
     console.error("正しい答えは、最期から誕生へ向かわなければなりません。")
     const password = Cookies.get("password");
