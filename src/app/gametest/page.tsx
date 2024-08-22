@@ -40,7 +40,7 @@ export default function GamePage() {
           <div className="p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">Roll a Ball</h2>
             <p className="text-gray-600">
-              ボールを転がして、揺れる床に気をつけながらコインを全部取ることを目指す。シンプルながらも中毒性のあるゲームにしたいな♪
+              ボールを転がして、揺れる床に気をつけながらコインを全部取ることを目指す。シンプルながらも中毒性のあるゲーム♪ クリア後特典とかも、実装してみようかな？
             </p>
             <div className="mt-4 text-center">
               <button
