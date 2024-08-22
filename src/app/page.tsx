@@ -74,8 +74,7 @@ export default function YaguchiKunPage() {
           </p>
           <Image src="/floor_texture.jpg" alt="ゲームイメージ" width={200} height={150} className="my-4 rounded-md" />
           <a
-            href="/gametest"
-            className="text-indigo-500 hover:underline mt-2 block text-center py-2 px-4 mt-12 bg-indigo-100 rounded-full hover:bg-indigo-200 transition-colors duration-300"
+            className="text-gray-400 mt-2 block text-center py-2 px-4 mt-12 bg-gray-200 rounded-full cursor-not-allowed"
           >
             未作成
           </a>

@@ -16,15 +16,6 @@ type DiaryEntry = {
 export default function DiaryPage() {
 
   const router = useRouter(); 
-  useEffect(() => {
-    const password = Cookies.get("password");
-
-    if (password === "3C4deskP") {
-      setIsAuthenticated(true);
-    } else {
-      router.push("/signin");
-    }
-  }, [router]);
   
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
   const [isDesignChanged, setIsDesignChanged] = useState(false);
@@ -56,7 +47,7 @@ export default function DiaryPage() {
   useEffect(() => {
     const password = Cookies.get("password");
 
-    if (password === "yourPassword") {
+    if (password === "3C4deskP") {
       setIsAuthenticated(true);
     } else {
       router.push("/signin");
