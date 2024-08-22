@@ -11,7 +11,7 @@ export default function GamePage() {
   useEffect(() => {
     const password = Cookies.get("password");
 
-    if (password === "yourPassword") {
+    if (password === "3C4deskP") {
       setIsAuthenticated(true);
     } else {
       router.push("/signin");

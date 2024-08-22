@@ -10,7 +10,7 @@ const SignInPage = () => {
   const router = useRouter();
 
   const handleSignIn = () => {
-    const correctPassword = "yourPassword";
+    const correctPassword = "3C4deskP";
 
     if (password === correctPassword) {
       Cookies.set("password", correctPassword, { expires: 1 }); // 1日間有効
