@@ -14,8 +14,8 @@ type DiaryEntry = {
 };
 
 export default function DiaryPage() {
-  const router = useRouter(); // Move this line above the first useEffect
 
+  const router = useRouter(); 
   useEffect(() => {
     const password = Cookies.get("password");
 
@@ -106,7 +106,7 @@ export default function DiaryPage() {
       {
         date: "2024-08-23",
         content:
-          "今日、ページのデザインを大幅に変更したよ！シンプルでモダンな感じにしてみたんだ。色はあまり使わない方が、かっこいいデザインになるんだね。この調子でボクのページを増やしていきたいな。作ったゲームを紹介する/gameページを作ろうかな! ...でも、まだテストだから、URLはその後に「test」をつけておこうっと。今晩までに線香花火ゲー���を作らないと。自分の作ったゲームだけど、妹とは正々堂々勝負したいな!",
+          "今日、ページのデザインを大幅に変更したよ！シンプルでモダンな感じにしてみたんだ。色はあまり使わない方が、かっこいいデザインになるんだね。この調子でボクのページを増やしていきたいな。作ったゲームを紹介する/gameページを作ろうかな! ...でも、まだテストだから、URLはその後に「test」をつけておこうっと。今晩までに線香花火ゲームを作らないと。自分の作ったゲームだけど、妹とは正々堂々勝負したいな!",
         image: "/diaryyaguchi3.png",
       },
       ...prevEntries,
